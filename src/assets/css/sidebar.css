@@ -1,0 +1,16 @@
+.sidebar{
+    border: 2px solid;
+    border-color: rgb(209, 209, 209);
+    background-color: yellowgreen;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 10px;
+    padding-top: 10px;
+    height: calc(100% - 0px); 
+    margin: 18px 10px;     
+}
+
+.drop1{
+    background-color: white;
+    float: left;
+}
