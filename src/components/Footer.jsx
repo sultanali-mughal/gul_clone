@@ -31,6 +31,13 @@ export default function Footer() {
             <p className="para">ABOUT GULAHMED</p>
             <a className="link" href="#">ABOUT US</a>
             <a className="link" href="#">COMPANY</a>
+            <a className="link" href="#">CAREER'S</a>
+            <a className="link" href="#">STORE LOCATOR</a>
+          </div>
+          <div class="grid-item">
+            <p className="para">ABOUT GULAHMED</p>
+            <a className="link" href="#">ABOUT US</a>
+            <a className="link" href="#">COMPANY</a>
             <a className="link" href="#">CAREERS</a>
             <a className="link" href="#">STORE LOCATOR</a>
           </div>
