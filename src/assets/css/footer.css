@@ -28,3 +28,13 @@
    text-align: left;
    
 }
+.para{
+  font-weight: bold;
+}
+.social{
+  padding-left: 15px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
