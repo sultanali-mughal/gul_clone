@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import "../assets/css/sidebar.css";
 
-const CollapseButton = () => {
+const CollapseButton = ({ buttonText, content }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   const handleToggleCollapse = () => {
@@ -9,13 +10,14 @@ const CollapseButton = () => {
 
   return (
     <div>
-      <button onClick={handleToggleCollapse}>
-        {isCollapsed ? 'Expand' : 'Collapse'}
+      <button className="btnExp" onClick={handleToggleCollapse}>
+        {isCollapsed ? "" : ""} {buttonText}
+        {/* 'Expend' : 'Collapse' */}
       </button>
       {!isCollapsed && (
         <div>
           {/* Content to be displayed when expanded */}
-          <p>This is the expanded content.</p>
+          <p dangerouslySetInnerHTML={{ __html: content }} />
         </div>
       )}
     </div>
@@ -24,23 +26,68 @@ const CollapseButton = () => {
 
 const Sidebar = () => {
   return (
-    <div>
-      <h4>React Collapse/Expand Example</h4>
+    <div className="sidebar">
+      <h4>Filter</h4>
       <hr />
-      <CollapseButton />
+      <CollapseButton
+        buttonText="CATEGORY"
+        content="> <a href='#'>Summer Esssential Collection</a> <BR>
+                 > <a href='#'>Tribute Collection</a> <BR> 
+                 > <a href='#'>Summer Premium Collection</a> <BR>
+                 > <a href='#'>Vintage Garden</a> <BR> 
+                 > <a href='#'>Yolo collection</a> <BR>
+                 > <a href='#'>Red Collection 2023</a> <BR>
+                 > <a href='#'>Chunri Collection</a> <BR>"
+      />
       <hr />
-      <CollapseButton />
+      <CollapseButton
+        buttonText="DISCOUNT PERCENTAGE"
+        content="> <a href='#'>30%</a> <BR>"
+      />
       <hr />
-      <CollapseButton />
+      <CollapseButton
+        buttonText="PRICE"
+        content=" > <a href='#'>PKR 0.00 - PKR 2,999.99</a> <BR>
+                  > <a href='#'>PKR 3,000.00 - PKR 5,999.99</a> <BR>
+                  > <a href='#'>PKR 6,000.00 - PKR 8,999.99</a> <BR>
+                  > <a href='#'>PKR 9,000.00 - PKR 11,999.99</a> <BR>
+                  > <a href='#'>PKR 12,000.00 - PKR 14,999.99</a> <BR>
+                  > <a href='#'>PKR 15,000.00 - PKR 17,999.99</a> <BR>"
+      />
+      <hr />
+      <CollapseButton
+        buttonText="TYPE"
+        content=" >  <a href='#'> 1 PC</a> <BR>
+                  >  <a href='#'> 2 PC</a> <BR>
+                  >   <a href='#'> 3 PC</a> <BR>"
+      />
+      <hr />
+      <CollapseButton
+        buttonText="SHIRT FABRIC"
+        content="> <a href='#'>Lawn</a> <BR>
+                 > <a href='#'>Chunri Lawn</a> <BR> 
+                 > <a href='#'>Embroidered Lawn</a> <BR>
+                 > <a href='#'>Cotton</a> <BR> 
+                 > <a href='#'>Denting</a> <BR>"
+      />
+      <hr />
+      <CollapseButton
+        buttonText="DUPATTA FABRIC"
+        content="> <a href='#'>Lawn</a> <BR>
+                 > <a href='#'>Chiffon</a> <BR> 
+                 > <a href='#'>Embroidered Lawn</a> <BR>
+                 > <a href='#'>Silk</a> <BR> 
+                 > <a href='#'>Net</a> <BR>
+                 > <a href='#'>Dobby</a> <BR>
+                 > <a href='#'>Chunri Lawn</a> <BR>
+                 > <a href='#'>Denting Lawn</a> <BR>"
+      />
       <hr />
     </div>
   );
 };
 
 export default Sidebar;
-
-
-
 
 // import React, { useState } from "react";
 // import "../assets/css/sidebar.css";
