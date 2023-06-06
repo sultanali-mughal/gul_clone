@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../assets/css/sidebar.css";
+import { Link } from "react-router-dom";
 
 const CollapseButton = ({ buttonText, content }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -16,8 +17,9 @@ const CollapseButton = ({ buttonText, content }) => {
       </button>
       {!isCollapsed && (
         <div>
-          {/* Content to be displayed when expanded */}
-          <p dangerouslySetInnerHTML={{ __html: content }} />
+          {content.map(title => {
+            return <div key={title}><Link to={"/"+title}>{title}</Link></div>;
+           })}
         </div>
       )}
     </div>
@@ -25,19 +27,16 @@ const CollapseButton = ({ buttonText, content }) => {
 };
 
 const Sidebar = () => {
+  const PagesArr = ['ChunriCollection','RedCollection2023', 'SummerEsssentialCollection', 'SummerEsssentialCollection', 'SummerEsssentialCollection'];
   return (
     <div className="sidebar">
       <h4>Filter</h4>
+      
       <hr />
       <CollapseButton
         buttonText="CATEGORY"
-        content="> <a href='#'>Summer Esssential Collection</a> <BR>
-                 > <a href='#'>Tribute Collection</a> <BR> 
-                 > <a href='#'>Summer Premium Collection</a> <BR>
-                 > <a href='#'>Vintage Garden</a> <BR> 
-                 > <a href='#'>Yolo collection</a> <BR>
-                 > <a href='#'>Red Collection 2023</a> <BR>
-                 > <a href='#'>Chunri Collection</a> <BR>"
+        content = { PagesArr }
+        
       />
       <hr />
       <CollapseButton
