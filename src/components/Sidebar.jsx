@@ -33,7 +33,7 @@ const Sidebar = () => {
         buttonText="CATEGORY"
         content="> <a href='#'>Summer Esssential Collection</a> <BR>
                  > <a href='#'>Tribute Collection</a> <BR> 
-                 > <a href='#'>Summer Premium Collection</a> <BR>
+                 > <a href='#'>Summer Premium Collections</a> <BR>
                  > <a href='#'>Vintage Garden</a> <BR> 
                  > <a href='#'>Yolo collection</a> <BR>
                  > <a href='#'>Red Collection 2023</a> <BR>
