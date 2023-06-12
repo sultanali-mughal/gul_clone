@@ -1,0 +1,7 @@
+.accordion {
+    --bs-accordion-border-width: 0px;
+    --bs-accordion-btn-focus-box-shadow: none;
+}
+  .accordion-button:not(.collapsed) {
+    --bs-accordion-active-bg: none;
+}
