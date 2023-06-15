@@ -1,6 +1,4 @@
 import React from "react";
-// import Dropdown from 'react-bootstrap/Dropdown';
-// import DropdownButton from 'react-bootstrap/DropdownButton';
 import "../assets/css/header.css";
 
 export default function Header() {
